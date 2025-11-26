@@ -1,0 +1,315 @@
+:root {
+  --saig-main-bg-color: #ffffee;
+  --saig-body-text-color: #73675c;
+  --saig-footer-text-color: #4d453d;
+  --saig-link-color: #4d453d;
+  --saig-main-dark-color: #f2c291;
+  --saig-navbar-gradient-color: #a69585;
+  --saig-carousel-text-color: #99471f;
+  --saig-btn-color: #99471f;
+  --saig-gallerycard-border-color: #f2c291;
+  --saig-projectscard-color: #ffffee;
+  --saig-projectamenities-icon-color: #f2c291;
+  --saig-ourstory-border-color: #f2c291;
+  --saig-logo-blue-light: #087bb4;
+  --saig-logo-blue-dark: #1e4d81;
+  --saig-logo-text-color: #02183d;
+  --saig-logo-brown-light: #ff7900;
+  --saig-logo-brown-dark: #d15e00;
+  --saig-main-font-bold: 700;
+  --saig-main-font-semibold: 600;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  color: var(--saig-body-text-color) !important;
+  background-color: var(--saig-main-bg-color) !important;
+  /* A light blue shade */
+}
+
+/* APPLIES THE SAIG FONT THOUGHOUT THE APP */
+* {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* Hide scrollbar but keep scroll functionality */
+  overflow-y: scroll;
+  /* allow scrolling */
+  scrollbar-width: none;
+  /* for Firefox */
+  -ms-overflow-style: none;
+  /* for Internet Explorer and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, Opera */
+}
+
+.top-banner img {
+  /* NOT USING FOR NOW */
+  width: 100%;
+  height: 430px;
+  /* Maintains aspect ratio */
+  display: block;
+  /* Removes any extra space below the image */
+}
+
+/* Transparent Navbar Initial */
+.custom-navbar {
+  background-color: transparent !important;
+  transition: background-color 0.1s ease;
+  background-image: linear-gradient(to bottom,
+      var(--saig-navbar-gradient-color) -80%, transparent 90%);
+  background-blend-mode: multiply;
+  padding-left: 4%;
+  padding-right: 3%;
+}
+
+.navbar .nav-link {
+  color: var(saig-link-color);
+  /* text color */
+  font-size: 0.88rem;
+}
+
+/* Solid Background after Scroll */
+.navbar-scrolled {
+  background-color: var(--saig-main-dark-color) !important;
+  /* brand color */
+  background-image: linear-gradient(to bottom, transparent, transparent);
+}
+
+.hero {
+  background: url('assets/img/saig-card-commercial.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.card img {
+  height: 220px;
+  object-fit: contain;
+}
+
+/* .card-img-top { // USED DEFAULT IN CODE, ADDED THIS FOR TESTING
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+} */
+
+.gallerycard-custom-border {
+  border-color: var(--saig-gallerycard-border-color) !important;
+  /* Example custom color */
+  background-color: var(--saig-main-bg-color);
+  color: var(--saig-body-text-color);
+}
+
+
+.gallery-img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.modal-fullscreen .modal-body {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.full-screen-img {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Optional: dark overlay */
+}
+
+/* Our Story - Directors*/
+.directorcard-custom-border {
+  border-color: var(--saig-gallerycard-border-color) !important;
+  /* Example custom color */
+  background-color: var(--saig-main-bg-color);
+  color: var(--saig-body-text-color);
+}
+.team-member img {
+  width: 100%;
+  height: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.team-member {
+  margin-bottom: 2rem;
+}
+
+.title-margin-top {
+  margin-top: 100px;
+}
+footer {
+  text-align: right;
+  color: var(--saig-footer-font-color);
+  background-color: var(--saig-main-dark-color) !important;
+  padding-top: 1%;
+  padding-bottom: 0.4%;
+}
+
+.carousel img {
+  max-height: 250px;
+  /* shorter height since side-by-side */
+  object-fit: cover;
+}
+
+.carousel h5 {
+  font-weight: 600;
+  color: var(--saig-carousel-text-color);
+}
+
+.carousel p {
+  margin: 0;
+  color: var(--saig-main-font-color);
+}
+
+.custom-font-paras {
+  font-size: 15px;
+}
+
+.custom-font-headings {
+  font-size: 18px;
+}
+
+.custom-font-large {
+  font-size: 22px;
+}
+
+.custom-font-bold {
+  font-weight: var(--saig-main-font-bold);
+}
+
+.custom-font-semibold {
+  font-weight: var(--saig-main-font-semibold);
+}
+
+.write-to-us {
+  padding: 150px 0px;
+}
+
+.write-to-us-img {
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+  /* Maintains aspect ratio */
+  display: block;
+}
+
+.project-category { 
+  margin-bottom: 10px;          /* spacing between project sections */ 
+  padding: 20px 0; 
+  /* border-bottom: 1px solid var(--saig-body-text-color); */
+} 
+
+.project-card-textcolor {
+  color: var(--saig-body-text-color)
+}
+
+/* Hide scrollbar but keep scroll functionality */
+
+.project-category-bottom {
+  border-bottom: 1px solid var(--saig-body-text-color); 
+}
+
+.projectcard-custom-border {
+  border-color: var(--saig-logo-brown-dark) !important;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+
+.project-highlights .card-border {
+  border-color: var(--saig-gallerycard-border-color) !important;
+  /* Example custom color */
+  background-color: var(--saig-main-bg-color);
+  color: var(--saig-body-text-color);
+}
+
+.project-highlights .card {
+  background-color: var(--saig-body-bg-color);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-highlights .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-highlights p {
+  color: var(--saig-body-text-color);
+}
+
+.project-highlights img {
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.facility-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--saig-projectamenities-icon-color) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facility-icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
+.facility-text {
+  font-size: 1rem;
+  color: #5a4632;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 767px) {
+  .facility-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .facility-text {
+    font-size: 0.95rem;
+  }
+}
+
+.project-details-margin { 
+  margin-top: 20px;          /* spacing between project sections */ 
+  padding: 10px 0;
+  /* border-bottom: 1px solid var(--saig-body-text-color); */
+}
+
+.projects-downloadscard {
+  border-color: var(--saig-gallerycard-border-color) !important;
+  color: var(--saig-body-text-color) !important;
+  background-color: var(--saig-main-bg-color);
+}
+
+/*background-color: #fffaf1; border: 1px solid #f1e0c5;*/
+.ourstory-content {
+  background-color: #fffdf7;
+  border: 2px;
+}
+
+
+

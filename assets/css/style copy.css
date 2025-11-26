@@ -1,0 +1,115 @@
+:root {
+ --saig-main-bg-color: #ffffcc;
+ --saig-main-text-color: #73675c;
+ --saig-footer-text-color: #4d453d; 
+ --saig-link-color: #4d453d;
+ --saig-main-dark-color: #f2c291;
+ --saig-navbar-gradient-color: #a69585;
+ --saig-carousel-text-color: #99471f;
+ --saig-gallerycard-border-color:#f2c291;
+ --saig-main-font-bold: 700;
+ --saig-main-font-semibold: 600;
+}
+
+body{ 
+  font-family: 'Montserrat', sans-serif !important; 
+  color: var(--saig-main-text-color);
+  background-color: var(--saig-main-bg-color); /* A light blue shade */} 
+  h1,h2,h3,h4,h5{
+  /* Hide scrollbar but keep scroll functionality */ 
+  overflow-y: scroll;         /* allow scrolling */ 
+  scrollbar-width: none;      /* for Firefox */ 
+  -ms-overflow-style: none;   /* for Internet Explorer and Edge */
+  }
+  body::-webkit-scrollbar { 
+  display: none;              /* for Chrome, Safari, Opera */ 
+  } 
+  .top-banner img {  /* NOT USING FOR NOW */
+   width: 100%;
+   height: 430px; /* Maintains aspect ratio */
+   display: block; /* Removes any extra space below the image */
+  } 
+
+  /* Transparent Navbar Initial */ 
+.custom-navbar { 
+  background-color: transparent !important; 
+  transition: background-color 0.1s ease;
+  background-image: linear-gradient(to bottom, 
+  var(--saig-navbar-gradient-color) -80%, transparent 90%); 
+  background-blend-mode: multiply;
+  padding-left: 4%;
+  padding-right: 3%;
+  } 
+
+.navbar .nav-link {
+  color: var(saig-link-color); /* text color */
+  font-size: 0.88rem;
+ }
+
+/* Solid Background after Scroll */ 
+.navbar-scrolled { 
+  background-color: var(--saig-main-dark-color) !important;  /* brand color */
+  background-image: linear-gradient(to bottom, transparent, transparent); 
+} 
+  
+.hero { 
+  background: url('assets/img/saig-card-commercial.jpg') no-repeat center center/cover; 
+  position: relative; 
+} 
+
+.card img { 
+  height: 220px; 
+  object-fit: cover; 
+} 
+
+.gallerycard-custom-border {
+  border-color: var(--saig-gallerycard-border-color) !important; /* Example custom color */
+  background-color: var(--saig-main-bg-color);
+}
+
+footer { 
+  text-align: right;
+  color: var(--saig-footer-font-color);
+  background-color: var(--saig-main-dark-color) !important;
+  padding-top: 1%;
+  padding-bottom: 0.4%;
+} 
+ 
+.carousel img { 
+  max-height: 250px; /* shorter height since side-by-side */ 
+  object-fit: cover; 
+} 
+
+.carousel h5 { 
+  font-weight: 600; 
+  color: var(--saig-carousel-text-color); 
+} 
+
+.carousel p { 
+  margin: 0; 
+  color: var(--saig-main-font-color); 
+} 
+
+.custom-font-paras {
+  font-size: 15px;
+}
+.custom-font-headings {
+  font-size: 18px;
+}
+ .custom-font-large {
+  font-size: 22px;
+}
+
+.custom-font-bold {
+  font-weight: var(--saig-main-font-bold);
+}
+
+.custom-font-semibold {
+  font-weight: var(--saig-main-font-semibold);
+}
+
+/* Hide scrollbar but keep scroll functionality */ 
+
+
+ 
+
