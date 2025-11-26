@@ -6,7 +6,7 @@ backend:
   auth_type: oauth
   base_url: https://saig-oauth-server.vercel.app
   auth_endpoint: auth
-  token_endpoint: token
+  token_endpoint: callback
 
 
 
