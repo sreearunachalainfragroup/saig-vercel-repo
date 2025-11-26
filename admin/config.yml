@@ -1,7 +1,7 @@
 # Vercel CMS Configuration (GitHub OAuth)
 backend:
   name: github
-  repo: sreearunachalainfragroup/saig-repo
+  repo: sreearunachalainfragroup/saig-vercel-repo
   branch: main
   auth_type: oauth
   base_url: https://saig-oauth-server.vercel.app
