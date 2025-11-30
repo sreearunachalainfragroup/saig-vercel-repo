@@ -19,15 +19,20 @@
 
     <script>
       // Initialize OAuth with your server URL
-      window.CMS_OAUTH = {
-        base_url: "https://saig-oauth-server.vercel.app",
-        auth_endpoint: "auth",
-        token_endpoint: "callback"
-      };
+     window.addEventListener("load", () => {
+        window.CMS_OAUTH = {
+          base_url: "https://saig-oauth-server.vercel.app",
+          auth_endpoint: "auth",
+          token_endpoint: "callback"
+        };
 
-      // Initialize Decap CMS
-      CMS.init();
-      
+        if (window.CMS) {
+          CMS.init();
+        } else {
+          console.error("CMS not loaded!");
+        }
+      });
+
     </script>
   </body>
 </html>
