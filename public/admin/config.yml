@@ -9,6 +9,7 @@ backend:
   token_endpoint: callback
   use_graphql: false
 
+publish_mode: editorial_workflow
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -29,7 +30,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Project Title", name: "title", "widget": "string" }
+      - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Category", name: "category", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Description", name: "body", widget: "markdown" }

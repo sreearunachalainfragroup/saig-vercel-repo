@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SAIG Admin Dashboard</title>
 
-    <!-- OAuth client for GitHub login -->
-    <script src="https://unpkg.com/decap-cms-oauth-client/dist/oauth.js"></script>
+    <!-- Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.9/dist/decap-cms.js"></script>
+
+    <!-- OAuth client -->
+    <script src="https://unpkg.com/decap-cms-oauth-client@^0.3.0/dist/decap-cms-oauth-client.js"></script>
   </head>
 
   <body>
-    <!-- Load Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+
+    <!-- CMS UI container (mandatory) -->
+    <div id="nc-root"></div>
+
+    <script>
+      // Initialize OAuth with your server URL
+      window.CMS_OAUTH = {
+        base_url: "https://saig-oauth-server.vercel.app",
+        auth_endpoint: "auth",
+        token_endpoint: "callback"
+      };
+
+      // Initialize Decap CMS
+      CMS.init();
+      
+    </script>
   </body>
 </html>
