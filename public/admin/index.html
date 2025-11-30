@@ -4,21 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SAIG Admin Dashboard</title>
-  </head>
-  <body>
-    
+
     <!-- OAuth bridge for GitHub login -->
     <script src="https://unpkg.com/decap-cms-oauth-client/dist/oauth.js"></script>
   </head>
+
   <body>
     <!-- Load Decap CMS -->
     <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js?v=2"></script>
 
     <script>
-      // Important for OAuth to work
+      // Important for OAuth + CMS to work
       window.CMS = CMS;
       CMS.init();
     </script>
-
   </body>
 </html>
