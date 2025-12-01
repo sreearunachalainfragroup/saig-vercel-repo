@@ -5,34 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SAIG Admin Dashboard</title>
 
-    <!-- Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.9/dist/decap-cms.js"></script>
-
-    <!-- OAuth client -->
-    <script src="https://unpkg.com/decap-cms-oauth-client@^0.3.0/dist/decap-cms-oauth-client.js"></script>
+    <!-- Load Decap CMS (includes OAuth support) -->
+    <script src="https://unpkg.com/decap-cms@^3.9.0/dist/decap-cms.js"></script>
   </head>
 
   <body>
-
-    <!-- CMS UI container (mandatory) -->
+    <!-- CMS container -->
     <div id="nc-root"></div>
 
     <script>
-      // Initialize OAuth with your server URL
-     window.addEventListener("load", () => {
-        window.CMS_OAUTH = {
-          base_url: "https://saig-oauth-server.vercel.app",
-          auth_endpoint: "auth",
-          token_endpoint: "callback"
-        };
-
+      window.addEventListener("load", () => {
+        // This is all CMS needs to start
         if (window.CMS) {
           CMS.init();
         } else {
-          console.error("CMS not loaded!");
+          console.error("CMS failed to load");
         }
       });
-
     </script>
   </body>
 </html>
